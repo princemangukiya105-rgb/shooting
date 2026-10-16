@@ -1,0 +1,761 @@
+/* ==========================================================================
+   MOMENTS PRODUCTION — RESPONSIVE STYLESHEET (MOBILE, TABLET & DESKTOP)
+   Ensures 100% fluid responsiveness for all pages, images, grids & cards.
+   ========================================================================== */
+
+/* Universal Layout Safeguards */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   Responsive Grid & Helper Classes
+   ========================================================================== */
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.editorial-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.ratings-overview-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Breakpoint: Large Desktops & Laptops (<= 1280px)
+   ========================================================================== */
+@media (max-width: 1280px) {
+  .hero-proof-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .travel-banner-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem;
+  }
+  
+  .footer-main-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer-col-newsletter {
+    grid-column: span 3;
+    max-width: 550px;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Medium Desktops & Tablets Landscape (<= 1200px)
+   Navbar transforms into clean hamburger drawer to prevent crowding
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .nav-menu {
+    display: none !important;
+  }
+  
+  .menu-toggle-btn {
+    display: flex !important;
+  }
+
+  .navbar {
+    padding: 0.85rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Laptops & Tablets Landscape (<= 1080px)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  .contact-info-card {
+    padding: 2.2rem 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .inquiry-form-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Tablets Portrait (<= 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .philosophy-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .philosophy-float-badge {
+    position: static;
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .philosophy-main-img-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  .couple-shoot-mosaic {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .mosaic-1 {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .mosaic-2 {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .mosaic-3, .mosaic-4 {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .mosaic-5 {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .instagram-feed-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .editorial-guides-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Mobile Devices (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+  
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .top-announcement-bar {
+    display: none;
+  }
+  
+  .navbar {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .brand-logo-img {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .brand-title {
+    font-size: 1.75rem;
+  }
+
+  .brand-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.28em;
+  }
+  
+  /* Hero */
+  .hero-editorial {
+    padding: 4rem 0 3rem 0;
+    min-height: auto;
+  }
+  
+  .hero-headline {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .hero-headline .script-accent {
+    font-size: 1.15em;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .play-showreel-btn {
+    justify-content: center;
+  }
+  
+  .hero-proof-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding-top: 1.8rem;
+  }
+
+  .hero-proof-number {
+    font-size: 1.75rem;
+  }
+
+  .hero-proof-label {
+    font-size: 0.68rem;
+  }
+
+  /* Video Feature */
+  .film-cinematic-vignette {
+    padding: 1.25rem;
+  }
+
+  .film-play-disc {
+    width: 58px;
+    height: 58px;
+  }
+
+  .film-play-disc svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .film-watch-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .film-bottom-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .film-bottom-info .btn {
+    width: 100%;
+  }
+
+  .film-meta-specs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .film-editorial-footer {
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  /* Stories & Cards */
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .story-details {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .story-title {
+    font-size: 1.5rem;
+  }
+
+  /* Couple Shoot Mosaic */
+  .couple-shoot-mosaic {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mosaic-item {
+    grid-column: span 1 !important;
+    aspect-ratio: 16 / 11 !important;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .testimonial-card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .testimonial-body {
+    font-size: 1.05rem;
+  }
+
+  /* Forms & Contact Section */
+  .section-contact-page {
+    padding: 3.5rem 0;
+  }
+  
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .contact-info-col {
+    width: 100%;
+  }
+  
+  .contact-info-card {
+    padding: 1.8rem 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .contact-card-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  
+  .contact-detail-row {
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+  }
+  
+  .contact-icon-bubble {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-icon-bubble svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .contact-detail-text h4 {
+    font-size: 0.72rem;
+  }
+  
+  .contact-detail-text p,
+  .contact-detail-text a {
+    font-size: 0.92rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  
+  .whatsapp-direct-card {
+    padding: 1.8rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    gap: 0.85rem;
+  }
+  
+  .whatsapp-direct-card h4 {
+    font-size: 1.3rem;
+  }
+  
+  .whatsapp-direct-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .whatsapp-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .inquiry-form-card {
+    padding: 2rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .form-card-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .form-card-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    margin-bottom: 1.15rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.15rem;
+    gap: 0.4rem;
+  }
+  
+  .form-group label {
+    font-size: 0.72rem;
+  }
+  
+  .form-control {
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+  }
+  
+  .service-checkbox-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  
+  .checkbox-label-card {
+    padding: 0.85rem 1rem;
+    font-size: 0.86rem;
+  }
+  
+  .form-submit-btn {
+    padding: 1.05rem 1.25rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .form-submit-note {
+    font-size: 0.76rem;
+    margin-top: 0.85rem;
+  }
+  
+  /* Travel & FAQ */
+  .travel-banner-box {
+    padding: 2rem 1.25rem;
+  }
+
+  .travel-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .travel-schedule-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .faq-question-btn {
+    padding: 1.2rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.25rem 1.4rem 1.25rem;
+  }
+  
+  /* Footer */
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer-col-newsletter {
+    grid-column: span 1;
+  }
+  
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .ambient-audio-player {
+    bottom: 16px;
+    left: 16px;
+    padding: 0.4rem 0.85rem;
+  }
+
+  /* Subpage Hero */
+  .subpage-hero {
+    padding: 4rem 0 2.8rem 0;
+  }
+
+  .section-title,
+  .subpage-hero-title {
+    font-size: clamp(2rem, 6vw, 2.8rem) !important;
+  }
+
+  .subpage-hero-desc,
+  .subpage-hero p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Small Smartphones (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-title,
+  .subpage-hero-title {
+    font-size: 1.85rem !important;
+  }
+  
+  .subpage-hero {
+    padding: 3rem 0 2rem 0;
+  }
+
+  .subpage-hero-desc,
+  .subpage-hero p {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .breadcrumb-trail {
+    font-size: 0.68rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .hero-proof-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .hero-proof-number {
+    font-size: 1.55rem;
+  }
+  
+  .instagram-feed-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  .faq-tab-btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.72rem;
+  }
+
+  /* Contact Page */
+  .section-contact-page {
+    padding: 2.25rem 0;
+  }
+
+  .contact-layout {
+    gap: 1.25rem;
+  }
+
+  .contact-info-card {
+    padding: 1.35rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card-title {
+    font-size: 1.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .contact-detail-row {
+    gap: 0.8rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .contact-icon-bubble {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-icon-bubble svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contact-detail-text h4 {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-detail-text p,
+  .contact-detail-text a {
+    font-size: 0.86rem;
+  }
+
+  .whatsapp-direct-card {
+    padding: 1.35rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .whatsapp-direct-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-direct-card p {
+    font-size: 0.85rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.76rem;
+    padding: 0.8rem 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .inquiry-form-card {
+    padding: 1.35rem 1rem;
+  }
+
+  .form-card-title {
+    font-size: 1.5rem !important;
+  }
+
+  .form-card-subtitle {
+    font-size: 0.84rem;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.8rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .checkbox-label-card {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+    gap: 0.6rem;
+    min-height: 44px;
+  }
+
+  .form-submit-btn {
+    padding: 0.95rem 1rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+  }
+
+  .form-submit-note {
+    font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   Breakpoint: Ultra-Compact Mobile (<= 360px)
+   ========================================================================== */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .subpage-hero-title,
+  .subpage-hero .section-title {
+    font-size: 1.65rem !important;
+  }
+  
+  .contact-info-card,
+  .whatsapp-direct-card,
+  .inquiry-form-card {
+    padding: 1.15rem 0.75rem;
+  }
+  
+  .contact-detail-row {
+    gap: 0.65rem;
+  }
+  
+  .contact-detail-text p,
+  .contact-detail-text a {
+    font-size: 0.82rem;
+  }
+  
+  .form-submit-btn {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 0.85rem 0.65rem;
+  }
+}
